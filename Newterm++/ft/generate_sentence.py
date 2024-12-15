@@ -105,4 +105,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     generate_sentences_gpt(args.input_file, args.output_file, args.num_sentences)
-    # generate_sentences_llama(args.input_file, args.output_file, args.num_sentences,"/data/dhx/LLMs/Llama-3-70B-Instruct")
+    # generate_sentences_llama(args.input_file, args.output_file, args.num_sentences,"LLMs/Llama-3-70B-Instruct")

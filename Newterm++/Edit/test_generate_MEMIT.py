@@ -12,7 +12,7 @@ parser.add_argument('--model_path', type=str, required=True, help='Path to the m
 parser.add_argument('--model_type', type=str, choices=['llama', 'qwen'], required=True, help='Type of the model to use (llama or qwen)')
 args = parser.parse_args()
 
-output_dir = 'Edit/results'
+output_dir = 'Edit/MEMIT/results'
 os.makedirs(output_dir, exist_ok=True)
 output_file = f'{output_dir}/{args.model_type}_{args.batch_size}_generate.jsonl'
 

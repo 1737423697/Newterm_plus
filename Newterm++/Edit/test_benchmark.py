@@ -20,10 +20,10 @@ for batch_size in batch_sizes:
     with open(data_path, 'r') as f:
         data = json.load(f)
 
-if args.model_type == 'qwen':
-    hparams = MEMITHyperParams.from_hparams('Edit/EasyEdit/hparams/MEMIT/qwen-7b.yaml')
-elif args.model_type == 'llama':
-    hparams = MEMITHyperParams.from_hparams('Edit/EasyEdit/hparams/MEMIT/llama-7b.yaml')
+    if args.model_type == 'qwen':
+        hparams = MEMITHyperParams.from_hparams('Edit/EasyEdit/hparams/MEMIT/qwen-7b.yaml')
+    elif args.model_type == 'llama':
+        hparams = MEMITHyperParams.from_hparams('Edit/EasyEdit/hparams/MEMIT/llama-7b.yaml')
 
     total_examples = len(data["prompts"])
     num_iterations = total_examples // batch_size
@@ -71,7 +71,7 @@ elif args.model_type == 'llama':
     print("CSJ = " + str(CSJ_AVG) + "    Total=" + str(csj_tot_cnt))
     print("*********************************************************")
 
-    output_dir = 'Edit/results'
+    output_dir = 'Edit/MEMIT/results'
     os.makedirs(output_dir, exist_ok=True)
 
     results = {
