@@ -7,10 +7,7 @@ This README provides an overview of the workflow for processing RAG datasets, in
 
 
 ## Request
-
-### todo
-
-
+Request the RAG data with request.py
 
 
 

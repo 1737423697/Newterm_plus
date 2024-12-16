@@ -148,7 +148,7 @@ torchrun --nnodes 1 --nproc_per_node 2 \
 ```bash
 cd ~/NewTerm++
 
-python ft/evaluate_lora.py --path ft/ --lora-weights LLMs/Llama-2-7b-Lora-eos/checkpoint-100/adapter_model --model LLMs/Llama-2-7b-chat-hf
+python ft/evaluate_lora.py --path ft/ --lora-weights LLMs/Llama-2-7b-Lora-eos/checkpoint-100/adapter_model --model LLMs/Llama-2-7b-chat-hf --year 2023 --task ALL
 ```
 
 And then you can use RAG/get_results.py to check the performance.
