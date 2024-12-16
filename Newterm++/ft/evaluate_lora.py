@@ -47,9 +47,9 @@ def test_open_source(task, model_name, year, path,lora_weights=None):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--task', type=str, choices=['COMA', 'COST', 'CSJ', 'ALL'], default='ALL', help='Which task to test.')
-    parser.add_argument('--model', type=str, default='/data/dhx/LLMs/Llama-2-7b-chat-hf', help='Which model to test.')
+    parser.add_argument('--model', type=str, required=True, help='Which model to test.')
     parser.add_argument('--year', type=str, default='2023', help='Which year to test.')
-    parser.add_argument('--path', type=str, default='data/', help='Base path for data files.')
+    parser.add_argument('--path', type=str, required=True, help='Base path for data files.')
     parser.add_argument('--lora-weights', type=str, required=True, help='Path to LoRA weights for the model.')
 
     args = parser.parse_args()
