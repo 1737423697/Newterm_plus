@@ -34,7 +34,7 @@ def compute_similarity(results_file, batch_size, model_name, embedder):
             
             generated_embedding = embedder.encode(selected_text, convert_to_tensor=True)
             target_embedding = embedder.encode(meaning, convert_to_tensor=True)
-            cosine_similarity = util.cos_sim(generated_embedding, target_embedding).item()
+            cosine_similarity = util.cos_sim(generated_embedding, target_embedding).item() if output_text else 0
 
             total_cos_sim += cosine_similarity
             all_cos_sim.append(cosine_similarity)
